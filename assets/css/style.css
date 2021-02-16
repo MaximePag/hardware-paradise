@@ -1,1 +1,14 @@
-// Main Navbar
+/* Main Navbar */
+
+#test{
+    background-color: #003367;
+    padding: -12px 15px;
+}
+
+#test01{
+    background-color: #304E89;
+    padding: 15px;
+}
+.navbar{
+    padding: 0;
+}
