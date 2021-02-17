@@ -24,3 +24,11 @@
 .img-navbar{
     width: 40px;
 }
+
+/*Main button */
+
+.btn-grey{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #C9C8CC;
+}
