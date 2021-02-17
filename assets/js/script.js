@@ -1,25 +1,83 @@
+// Fonction permettant de récupérer tous les prix dans le panier et les additionner pour afficher le total
 
+//Déclaration de la fonction
 function totalPriceSum() {
+
+    //On stocke dans la variable allPrices tous les éléments HTML dont la classe est product_price ce qui donne un tableau
     let allPrices = document.getElementsByClassName('product_price');
-    let total = Number(0.00);
-    for (let i = 0; i < allPrices.length; i++) {
-        let price = Number(allPrices[i].innerText);
+
+    //On déclare une variable total qu'on initialise à 0.00 avec l'objet Number() pour être sur que le type soit un int ou float.
+    let total = Number(0.00); 
+
+    //On fait une boucle for qui parcoure la lougueur du tableau allPrices
+    for (let i = 0; i < allPrices.length; i++) { 
+
+        //On stocke à chaque tour de boucle dans la variable price le texte qu'il y a dans un élément du tableau et on le convertit
+        let price = Number(allPrices[i].innerText); 
+
+         //On assigne et on additionne à la variable total le prix
         total += price;
-        console.log(total);
     }
-    return total.toFixed(2);
+
+    //On retourne le total de la fonction et on garde deux chiffres apres la virgule avec .toFixed(2)
+    return total.toFixed(2); 
 }
+
+
+//Déclaration de la fonction qui permet de calculer la somme d'un prix d'un produit avec comme paramètre price et quantity
 function priceSum(price, quantity) {
+
+    //On déclare la variable sum et on multiplie les deux paramètres price et quantity
     let sum = price * quantity;
+
+    //On retourne le résultat de la fonction
     return sum;
 }
+
+
+//Déclaration de la fonction qui permet d'ajouter un produit dans le panier avec comme paramètre button, qui est l'élément HTML button
 function addToBasket(button) {
+
+    //Si la valeur de button est à true cela affiche une alerte Sinon ça continue la fonction
     if (button.value == 'true'){
         alert('Vous avez déjà ajouté ce produit dans le panier.');
     }
     else{
+
+        //On met la valeur du button à false
         button.value = 'false';
-        // récupération de la quantité
+
+
+        //Explication de la récupération des données pour les variables en dessous
+        //Exemple : récuperer le prix
+        //Code : button.parentElement.parentElement.children[3].children[0].innerText;
+
+//                                      <div class="card">
+//                                          <img src="assets/img/ssd.jpg" class="card-img-top" alt="SSD">
+//               deuxième parentElement --->    <div class="card-body">
+//                                                  <h5 class="card-title">SSD SanDisk 1 To</h5>
+//                                                  <p class="card-text">SSD performant de la marque SanDisk avec une capacité de 1 To</p>
+//     quatrième enfant (children.Index 3)          <p class="card-text">Ref : <span>ssd001</span></p>
+//                  du deuxième parentElement --->  <p class="card-text">Prix : <span>109.99</span> €</p>
+//                    premier parentElement --->    <div class="input-group mb-3">
+//                                                      <div class="input-group-prepend">
+//                                                          <label class="input-group-text" for="qty">Quantité</label>
+//                                                      </div>
+//                                                      <select class="custom-select" id="qty">
+//                                                          <option selected value="1">1</option>
+//                                                          <option value="2">2</option>
+//                                                          <option value="3">3</option>
+//                                                          <option value="4">4</option>
+//                                                          <option value="5">5</option>
+//                                                      </select>
+//                                     button --->    <button class="btn btn-success mx-auto" onclick="addToBasket(this)">Ajouter au panier <i class="fas fa-cart-arrow-down"></i></button>
+//                                                  </div>
+//                                              </div>
+//                                          </div>
+//                                      </div>
+
+
+        // On déclare une variable 
         let quantity = button.parentElement.children[1].value;
         console.log(quantity);
         // récupération du prix
