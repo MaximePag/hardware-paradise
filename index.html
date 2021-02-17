@@ -20,14 +20,16 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalTitle">Votre Panier :</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" aria-label="Close">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-                <div id="modalBody" class="modal-body row"></div>
+                <div id="modalBody" class="modal-body">
+
+                </div>
                 <div id="modalFooter" class="modal-footer">
                     <p>Total : <span id="modalTotal">0</span> €</p>
-                    <button type="button" class="btn btn-danger">Vider le Panier</button>
+                    <button id="emptyBasket" type="button" class="btn btn-danger" data-dismiss="modal">Vider le Panier</button>
                     <button type="button" class="btn btn-success" data-dismiss="modal">Valider le Panier</button>
                 </div>
             </div>
@@ -108,6 +110,13 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <section class="row my-1">
+          <button type="button" class="btn btn-grey text-center mx-auto">PAIEMENT SÉCURISÉ</button>
+          <button type="button" class="btn btn-grey text-center mx-auto">PAIEMENT EN 3X</button>
+          <button type="button" class="btn btn-grey text-center mx-auto">LIVRAISON EXPRESS</button>
+  </section>
+
     <section class="container-fluid">
         <div class="row my-3">
             <div class="col-lg-3 mx-auto">
@@ -268,8 +277,61 @@
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        <div class="row my-5">
+            <div class="col-lg-12">
+                <h1 class="text-center">TOP DES VENTES</h1>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V1.png" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V2.png" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V3.png" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V4.png" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V5.jpg" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V6.jpg" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V7.png" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                                <div class="col-lg-3">
+                                    <img src="assets/img/V8.png" class="img-carousel d-block w-50 mx-auto" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="far fa-arrow-alt-circle-left fa-2x text-dark" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="far fa-arrow-alt-circle-right fa-2x text-dark" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
     <div id="block2"></div>
     <div id="block1">
