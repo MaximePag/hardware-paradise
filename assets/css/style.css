@@ -68,7 +68,10 @@ margin-left: 140px;
 }
 
 .btn-grey{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
     background-color: #C9C8CC;
 }
