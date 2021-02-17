@@ -24,6 +24,44 @@
 .img-navbar{
     width: 40px;
 }
+#block1{
+    background-color: #003367;
+    height: 1000px;
+    width: 100%;
+     float: left;
+    
+}
+#block2{
+    background-color: #F08219;
+    height: 10px;
+    width: 100%;
+     
+    
+}
+#BContact{
+    background-color: #F08219;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 100px;
+
+}
+#titre1{
+margin-left: 140px;
+}
+
+#block3{
+    background-color: #a0a0a0;
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+#cb{
+    height: 118px;
+    width:700px;
+  
+}
 .img-carousel{
     width: auto;
     height: 150px;
