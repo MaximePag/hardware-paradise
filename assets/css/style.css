@@ -28,3 +28,9 @@
     width: auto;
     height: 150px;
 }
+
+.btn-grey{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #C9C8CC;
+}
