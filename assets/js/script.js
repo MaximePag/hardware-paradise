@@ -99,20 +99,31 @@ function addToBasket(button) {
         let modalBody = document.getElementById('modalBody');
         let modalTotal = document.getElementById('modalTotal');
 
+
+        //On créé un élément HTML et on le stocke dans une variable
         let row = document.createElement('div');
+        //On ajoute les classes que l'on veux à l'élément
         row.classList.add('row');
 
         let divImg = document.createElement('div');
         divImg.classList.add('col-2');
 
+        //On créé un élément HTML imgElement et on le stocke dans une variable
         let imgElement = document.createElement('img');
+
+        //On défini la source de l'élément HTML imgElement avec la variable img qui contient le chemin de l'image préalablement récupéré
         imgElement.src = img;
+
+        //On ajoute comme enfant imgElement à divImg
         divImg.append(imgElement);
 
         let divDesc = document.createElement('div');
         divDesc.classList.add('col-7');
 
+        //On créé un élément HTML h5 que l'on stocke dans titleElement
         let titleElement = document.createElement('h5');
+
+        //On écrit dans l'élément titleElement le titre du produit préalablement récupéré.
         titleElement.innerText = title;
 
         let refElement = document.createElement('p');
